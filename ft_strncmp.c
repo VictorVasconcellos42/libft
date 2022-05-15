@@ -16,12 +16,16 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 {
 	unsigned int	i;
-	int	diff;
+	int				diff;
+	unsigned char	*string_one;
+	unsigned char	*string_two;
 
 	i = 0;
-	while ((i < n ))
+	string_one = (unsigned char *) s1;
+	string_two = (unsigned char *) s2;
+	while (i < n && string_one[i] && string_two[i])
 	{
-		diff = s1[i] - s2[i];
+		diff = string_one[i] - string_two[i];
 		if (diff != 0)
 			return (diff);
 		i++;

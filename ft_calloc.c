@@ -29,7 +29,7 @@ void	*ft_calloc(size_t count, size_t size)
 }
 
 /* #include <stdio.h>
-/*
+
             Aula 207: Curiosidade sobre as funções malloc e calloc
 
             Código escrito por Wagner Gaspar

@@ -18,20 +18,18 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*string_one;
 	unsigned char	*string_two;
 	int				diff;
-	int				i;
+	size_t			i;
 
 	string_one = (unsigned char *) s1;
 	string_two = (unsigned char *) s2;
 	i = 0;
-	while (string_one[i] && string_two[i] && n-- > 0)
+	while (i < n)
 	{
 		diff = string_one[i] - string_two[i];
 		if (diff != 0)
 			return (diff);
 		i++;
 	}
-	if (string_one[i] == '\0' || string_two[i] == '\0')
-		return (string_one[i] - string_two[i]);
 	return (0);
 }
 

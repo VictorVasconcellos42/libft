@@ -21,8 +21,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	destiny = (char *) dst;
 	source = (char *) src;
+
 	i = 0;
-	while (source[i] && n-- > 0)
+	if (dst == src || n == 0)
+		return (dst);
+	while (i < n)
 	{
 		destiny[i] = source[i];
 		i++;
