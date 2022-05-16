@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 18:29:56 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/06 21:42:18 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/16 11:46:15 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,31 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	string_one = (unsigned char *) s1;
 	string_two = (unsigned char *) s2;
-	while (i < n && string_one[i] && string_two[i])
+	while (i < n)
 	{
 		diff = string_one[i] - string_two[i];
 		if (diff != 0)
 			return (diff);
+		else if (string_two[i] == '\0' || string_one[i] == '\0')
+			break ;
 		i++;
 	}
 	return (diff);
 }
 
-/*#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
 
 int	main(void)
 
 {
-	char	teste[] = " abc";
-	char	compare[] = "ABC";
+	char	teste[] = "";
+	char	compare[] = "";
+	char	teste2[] = "";
+	char	compare2[] = "";
 	int	a;
 
-	a = ft_strncmp(teste, compare, 1);
+	a = ft_strncmp(teste2, compare2, 1);
 	printf("%i\n", strncmp(teste, compare, 1));
 	printf("%i", a);
-}*/
+} */
