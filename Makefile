@@ -6,7 +6,7 @@
 #    By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/06 18:25:11 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/05/13 17:42:27 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/05/16 17:31:49 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,19 +33,19 @@ CFLAGS	=	-Wall -Wextra -Werror
 .c.o:
 	${CC} ${CFLAGS} -c $< 
 	
-${NAME}:	${OBJS}
-	${AR} ${LBFLAGS} ${NAME} ${OBJS}
+$(NAME):	${OBJS}
+	${AR} ${LBFLAGS} $(NAME) ${OBJS}
 
 all:	${NAME}
 
-compile:	${NAME}
+compile:	$(NAME)
 	${CC} ${CFLAGS} main.c -L. ${LIBNAME} 
 
 clean:
 	${RM} ${OBJS}
 	
 fclean:	clean
-	${RM} ${NAME}
+	${RM} $(NAME)
 	
 re:	fclean all
 
