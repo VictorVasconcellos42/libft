@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 07:39:26 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/12 12:36:59 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/16 10:27:56 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*string;
 
 	string = (unsigned char *) s;
-	while (*string && n-- > 0)
+	while (n-- > 0)
 	{
 		if (*string == (unsigned char) c)
 			return (string);
