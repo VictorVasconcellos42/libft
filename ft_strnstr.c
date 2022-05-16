@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:32:11 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/12 14:32:12 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/16 14:07:57 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,23 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*string;
 	char	*substring;
 
 	substring = (char *) needle;
-	string = (char *) haystack;
 	i = 0;
 	if (needle[0] == '\0')
 		return ((char *) haystack);
-	while (string[i] != '\0' && i < len)
+	while (haystack[i] || i < len)
 	{
 		j = 0;
-		while (string[i + j] == substring[j])
+		while (haystack[i + j] == substring[j] && i < len)
 		{
-			if (substring[j + 1] == '\0')
-				return (&string[i]);
+			if (substring[j + 1] == '\0' && substring + i)
+			{
+				if (j + i > len)
+					return (NULL);
+				return ((char *) &haystack[i]);
+			}
 			j++;
 		}
 		i++;
