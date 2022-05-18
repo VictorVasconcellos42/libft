@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:29:03 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/10 18:49:48 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/18 04:04:18 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *) &s[len]);
 	while (len-- > 0)
 	{
-		if (s[len] == c)
+		if (s[len] == (unsigned char) c)
 			return ((char *) &s[len]);
 	}
 	return (NULL);
