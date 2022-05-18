@@ -41,10 +41,7 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	else if (str[i] == '+')
-	{
-		minus *= 1;
 		i++;
-	}
 	while (str[i] >= 48 && str[i] <= 57)
 	{
 		num = num * 10 + (str[i] - '0');
