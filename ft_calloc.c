@@ -15,11 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 
 {
-	size_t	*allocate;
+	void	*allocate;
 	size_t	i;
 
 	i = 0;
-	if (!(allocate = malloc(count * size)))
+	allocate = malloc((count * size));
+	if (!(allocate))
 		return (NULL);
 	while (allocate[i])
 	{
