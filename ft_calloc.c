@@ -16,16 +16,11 @@ void	*ft_calloc(size_t count, size_t size)
 
 {
 	void	*allocate;
-	size_t	i;
 
-	i = 0;
-	allocate = malloc((count * size));
+	n = size * count;
+	allocate = malloc(size);
 	if (!(allocate))
 		return (NULL);
-	while (allocate[i])
-	{
-		allocate[i] = '\0';
-		i++;
-	}
+	ft_bzero(allocate, (size));
 	return (allocate);
 }

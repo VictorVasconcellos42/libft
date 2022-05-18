@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 
 {
 	size_t	i;
@@ -26,9 +26,8 @@ char    *ft_strchr(const char *s, int c)
 	}
 	if (s[i] == c)
 		return ((char *) &s[i]);
-	return (0) ;
+	return (NULL);
 }
-
 
 /*int main(void)
 

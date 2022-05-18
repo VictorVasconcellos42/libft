@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 
 {
 	char	*source;
 	char	*destiny;
-	size_t		i;
-	
+	size_t	i;
+
 	source = (char *) src;
 	destiny = (char *) dst;
 	if (len == 0 || source == destiny)
@@ -41,4 +41,3 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-

@@ -21,7 +21,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	destiny = (char *) dst;
 	source = (char *) src;
-
 	i = 0;
 	if (dst == src || n == 0)
 		return (dst);

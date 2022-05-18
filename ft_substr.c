@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 {
 	size_t	i;
 	char	*destiny;
 
 	i = 0;
-	
 	if ((size_t) start > ft_strlen(s))
 		return (NULL);
-	if (!(destiny = malloc(len * sizeof(char))))
+	destiny = malloc(len * sizeof(char *));
+	if (!destiny)
 		return (NULL);
 	while (s[start] && i <= len)
 	{
