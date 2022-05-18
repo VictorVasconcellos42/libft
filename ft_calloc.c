@@ -19,7 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	i = 0;
-	allocate = malloc(count * size);
+	if (!(allocate = malloc(count * size)))
+		return (NULL);
 	while (allocate[i])
 	{
 		allocate[i] = '\0';
