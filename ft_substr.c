@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 17:44:34 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/18 03:25:17 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/18 08:15:22 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	destiny = malloc(len * sizeof(char));
 	if ((!destiny))
 		return (NULL);
-	while (i < len)
+	while (s[start] && i < len)
 	{
 		destiny[i] = s[start];
 		i++;
