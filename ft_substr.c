@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 17:44:34 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/18 08:34:33 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/18 15:59:48 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	else if (start + len > len_src)
 		len = len_src - start;
-	destiny = malloc((len) * sizeof(char));
+	destiny = malloc((len + 1) * sizeof(char));
 	if ((!destiny))
 		return (NULL);
 	while (s[start] && i < len)
