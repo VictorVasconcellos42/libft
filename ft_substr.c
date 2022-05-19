@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	else if (start + len > len_src)
 		len = len_src - start;
-	destiny = malloc((len + 1) * sizeof(char));
+	destiny = ft_calloc(len + 1, sizeof(char));
 	if ((!destiny))
 		return (NULL);
 	while (s[start] && i < len)
