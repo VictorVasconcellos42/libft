@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 22:55:28 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/18 04:02:49 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/19 17:13:40 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *) &s[i]);
 	return (NULL);
 }
-
-/*int main(void)
-
-{
-    char    *dest;
-	char 	*origin;
-
-	origin = strchr("Victor", '6');
-    dest = ft_strchr("Victor", '6');
-	puts(origin) ;
-    puts(dest);
-}*/
