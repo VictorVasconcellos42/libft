@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 19:47:40 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/24 02:07:26 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/24 17:58:12 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static char	**split_string(char const *string, char c, char **array)
 	position = 0;
 	len_words = 0;
 	i = 0;
+	if (string[i] == c)
+		i++;
 	while (i <= ft_strlen(string))
 	{
 		if ((string[i] == c && len_words != 0) || \
@@ -32,7 +34,7 @@ static char	**split_string(char const *string, char c, char **array)
 			position++;
 			len_words = 0;
 		}
-		else
+		else if (string[i] != c)
 			len_words++;
 		i++;
 	}
@@ -75,9 +77,15 @@ char	**ft_split(char const *string, char c)
 
 	if (!(string))
 		return (NULL);
+	if (c == '\0')
+	{
+		array_of_strings = malloc(1 * sizeof(*array_of_strings));
+		array_of_strings[0] = NULL;
+		return (array_of_strings);
+	}
 	string_len = ft_strlen(string);
 	count_words = how_many_words(string, c, string_len);
-	if (count_words == 0)
+	if (count_words == 0 && c == '\0')
 		return (NULL);
 	array_words = ft_calloc(count_words + 1, sizeof(char *));
 	if (!(array_words))
@@ -91,14 +99,22 @@ char	**ft_split(char const *string, char c)
 int	main(void)
 
 {
-	char	*source = "victor\0vasconcellos";
-	char	c = '\0';
+	char	*source = "minha,casa,minha,vida";
+	char	c = ',';
 	char	**array;
 
 	array = ft_split(source, c);
 	if	(!(array))
+	{
+		printf("KO TOTAL!Z\n");
 		return 0;
-	for (int i = 0;i < 2; i++)
+	}
+	for (size_t i = 0;i < 10; i++)
+	{
 		printf("%s\n", array[i]);
+	}
+	int i = 0;
+	while(array[i])
+		free(array[i++]);
 	return 0;
 }*/
