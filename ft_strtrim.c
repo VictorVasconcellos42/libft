@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 10:08:05 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/18 16:03:55 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/24 10:43:23 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		size_start++;
 	while (ft_strchr(set, s1[size_end]))
 		size_end--;
-	string = ft_substr(s1, size_start, size_end - size_start);
+	string = ft_substr(s1, size_start, size_end - size_start + 1);
 	return (string);
 }
