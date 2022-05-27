@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 18:23:30 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/27 08:02:13 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/27 08:42:56 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,5 @@ void	ft_putstr_fd(char *s, int fd);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striter(char *s, void (*f)(unsigned int, char *));
 #endif
