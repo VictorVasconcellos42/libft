@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 18:29:56 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/16 11:46:15 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/06/09 00:47:59 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	string_one = (unsigned char *) s1;
 	string_two = (unsigned char *) s2;
+	if (n == 0)
+		return (0);
 	while (i < n)
 	{
 		diff = string_one[i] - string_two[i];
