@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:15:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/06/02 10:04:21 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/16 17:07:48 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,3 +49,30 @@ int	ft_atoi(const char *str)
 	}
 	return (num * minus);
 }
+
+/* #include <string.h>
+#include <stdio.h>
+int	test(char *str)
+
+{
+	int	result;
+
+	result = atoi(str);
+    printf("Teste com a strind valendo %s\n", str);
+	printf("%i\n", result);
+	return 0;
+}
+
+int main(void)
+
+{
+    test("900");
+    test("1RAFAEL0 MARCELO");
+    test("3");
+    test("0");
+    test("210A30");
+    test("-299");
+    test("2147483648");
+    test("21474836489");
+    
+}*/

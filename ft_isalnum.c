@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 10:46:46 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/06/02 10:14:31 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/05/04 10:46:50 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,3 +17,17 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+
+/*#include <stdio.h>
+
+int	main(void)
+
+{
+	int  c;
+	char a;
+
+	a = '*';
+	c = ft_isalnum(a);
+	printf("%i\n", c);
+	return (0);
+} */

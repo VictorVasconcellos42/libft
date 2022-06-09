@@ -6,7 +6,7 @@
 #    By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/06 18:25:11 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/05/30 20:20:00 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/06/09 09:44:40 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,11 @@ SRCS	=   ft_isascii.c ft_isprint.c ft_strlen.c ft_memcpy.c ft_memmove.c ft_strlc
 			ft_split.c ft_itoa.c ft_putendl_fd.c ft_putnbr_fd.c \
 			ft_strmapi.c ft_striteri.c
 
+BONUS_S	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+
 OBJS	=	${SRCS:.c=.o}
+
+OBJS_BONUS	= ${BONUS_S:.c=.o}
 
 NAME	=	libft.a
 
@@ -26,7 +30,7 @@ CC	=	cc
 
 AR	=	ar
 
-LBFLAGS	=	rc
+LBFLAGS	=	rcs
 
 RM	=	rm -f
 
@@ -40,11 +44,11 @@ $(NAME):	${OBJS}
 
 all:	${NAME}
 
-compile:	$(NAME)
-	${CC} ${CFLAGS} main.c -L. ${LIBNAME} 
+bonus: ${OBJS_BONUS}
+	${AR} ${LBFLAGS} $(NAME) ${OBJS_BONUS}
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJS_BONUS}
 	
 fclean:	clean
 	${RM} $(NAME)

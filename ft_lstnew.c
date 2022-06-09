@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 12:20:44 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/06/02 18:22:23 by vde-vasc         ###   ########.fr       */
+/*   Created: 2022/06/09 07:23:14 by vde-vasc          #+#    #+#             */
+/*   Updated: 2022/06/09 07:40:50 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstnew(void *content)
 
 {
-	size_t	i;
+	t_list	*new;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	new = malloc(sizeof(t_list));
+	if (!(new))
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-
-{
-	char str[] = "Hello";
-	int	a;
-	a = ft_strlen(str);
-	printf("%i\n", a);
-	return 0;
-} */
