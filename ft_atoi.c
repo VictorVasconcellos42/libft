@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:15:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/05/16 17:07:48 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/06/10 17:36:42 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ static size_t	ft_ispace(const char *str)
 
 	i = 0;
 	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
-	{
 		i++;
-	}
 	return (i);
 }
 
