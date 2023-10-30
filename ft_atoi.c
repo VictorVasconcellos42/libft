@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:15:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/02/16 00:49:51 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/10/29 22:17:03 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 	minus = 1;
 	i = ft_ispace(str);
 	if (str[i] == '-' || str[i] == '+')
-	{	
+	{
 		if (str[i] == '-')
 			minus *= -1;
 		i++;
@@ -43,4 +43,3 @@ int	ft_atoi(const char *str)
 		num = num * 10 + (str[i++] - '0');
 	return (num * minus);
 }
-
