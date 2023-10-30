@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 23:23:32 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/02/16 00:40:52 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/10/29 19:32:35 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line_gnl(int fd);
+# define FALSE 0
+# define TRUE 1
+
+char	*get_next_line(int fd);
 char	*ft_strdup_gnl(char const *s);
 char	*ft_strchr_gnl(const char *s, int c);
 char	*ft_strjoin_gnl(char *s1, char *s2);
